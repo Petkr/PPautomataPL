@@ -2,13 +2,11 @@
 
 ## užívateľská príručka
 
-\
-\
 Program na prevádzanie konečných automatov na regulárne výrazy a späť v Prologu.
 
 Podporuje dve operácie:
-* [dfa_to_regex](#dfatoregex) - prevod deterministického konečného automatu na regulárny výraz
-* [regex_to_lnfa](#regextolnfa) - prevod regulárneho výrazu na nedeterministický konečný automat s lambda prechodmi
+* [dfa_to_regex](#dfa_to_regex) - prevod deterministického konečného automatu na regulárny výraz
+* [regex_to_lnfa](#regex_to_lnfa) - prevod regulárneho výrazu na nedeterministický konečný automat s lambda prechodmi
 
 Všetky identifikátory objektov v automatoch a regulárnych výrazoch môžu byť ľubovoľné reťazce.
 
@@ -33,14 +31,6 @@ Vstupný automat je zadaný ako trojica:
 * [počiatočný stav](#počiatočný-stav)
 * [zoznam prijímajúcich stavov](#prijímajúce-stavy)
 
-### Zoznam prechodov
-
-Zoznam trojíc v tvare [e(zo_stavu, symbol, do_stavu), ...].
-
-Ak sa v zozname vyskytuje viacero prechodov s rozvnakým vychádzajúcim stavom a symbolom, ignorujú sa všetky okrem posledného.
-
-Nemusí spolu tvoriť totálnu funkciu. Chýbajúce prechody sú doplnené ako prechody do stavu failState.
-
 ### Stavy
 
 Stav zadaného automatu je stav, ktorý sa nachádza ako vychádzajúci alebo koncový stav nejakého prechodu zo zoznamu prechodov, alebo failState.
@@ -48,6 +38,14 @@ Stav zadaného automatu je stav, ktorý sa nachádza ako vychádzajúci alebo ko
 ### Abeceda
 
 Symbolom automatu je symbol, ktorý sa nachádza v nejakom prechode zo zoznamu prechodov.
+
+### Zoznam prechodov
+
+Zoznam trojíc v tvare [e(zo_stavu, symbol, do_stavu), ...].
+
+Ak sa v zozname vyskytuje viacero prechodov s rovnakým vychádzajúcim stavom a symbolom, ignorujú sa všetky okrem posledného.
+
+Nemusí spolu tvoriť totálnu funkciu. Chýbajúce prechody sú doplnené ako prechody do stavu failState.
 
 ### Počiatočný stav
 
@@ -89,7 +87,7 @@ Regulárny výraz musí byť zadaný v úvodzovkách, napr. "a*.b".
 
 Regulárny výraz nie je nijak zjednodušovaný pred vytvorením automatu.
 
-Výsledný automat je vypísaný ako pätica:
+Výsledný automat je vypísaný ako šestica:
 * stavy
 * abeceda
 * prechody cez symboly abecedy, v tvare *zo_stavu* -*symbol*-> *do_stavu*
@@ -122,3 +120,7 @@ Výsledkom je automat s nasledovnou tabuľkou prechodov:
 | 3    | {}  | {}  | {1,2} |
 | 4    | {}  | {5} | {}    |
 | <- 5 | {}  | {}  | {}    |
+
+\
+\
+© 2020 Peter Fačko

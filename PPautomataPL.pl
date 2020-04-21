@@ -798,3 +798,6 @@ regex_to_lnfa :-
 	get_accept_states(LNFA, AcceptStates),
 	maplist_with_delims(write(", "), write, AcceptStates).
 %%%%%%%%%%%%%%%%%
+
+
+% © 2020 Peter Fačko

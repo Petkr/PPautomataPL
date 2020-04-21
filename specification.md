@@ -2,8 +2,6 @@
 
 ## špecifikácia
 
-\
-\
 Program na prevádzanie konečných automatov na regulárne výrazy a späť v Prologu.
 
 Dve základné operácie:
@@ -18,7 +16,7 @@ DFA zadané ako:
 * počiatočný stav
 * prijímajúce stavy
 
-Prechod je trojica (zo_stavu, symbol, do_stavu).\
+Prechod je trojica (*zo_stavu*, *symbol*, *do_stavu*).\
 Stavy zadaného DFA sú všetky spomenuté stavy v zozname prechodov.\
 Ak nejaký počiatočný a prijímajúci stav nie je spomenutý v zozname prechodov - chyba.\
 Abeceda zadaného DFA sú analogicky všetky spomenuté symboly.
@@ -43,4 +41,4 @@ LNFA sa vypíše ako:
 
 \
 \
-Peter Fačko
+© 2020 Peter Fačko
