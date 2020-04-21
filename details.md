@@ -76,10 +76,10 @@ Program aplikuje pri vytvorení nasledovné identity pre zjednodušenie regulár
 @* = @\
 r** = r*\
 (r1. ... .rn) = @, ak niektorý z členov (r) je @\
-(r1. ... .rn) = (s1. ... .sk), pričom (s) je (r) bez ~\
-(r1+ ... +rn)\* = (s1+ ... +sk)\*, pričom (s) je (r) bez ~\
+(r1. ... .rn) = (s1. ... .sk), pričom (s) je (r) bez \~\
+(r1+ ... +rn)\* = (s1+ ... +sk)\*, pričom (s) je (r) bez \~\
 r1+ ... +rn = s1+ ... +sk, pričom (s) je (r) bez @\
-(~+r).r* = r*
+(\~+r).r* = r*
 
 ### 3) Výpis regulárneho výrazu
 
