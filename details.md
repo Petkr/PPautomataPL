@@ -75,8 +75,8 @@ Program aplikuje pri vytvorení nasledovné identity pre zjednodušenie regulár
 ~* = ~\
 @* = @\
 r** = r*\
-(r_1. ... .r_n) = @, ak niektorý z členov (r) je @\
-(r_1. ... .r_n) = (s_1. ... .s_k), pričom (s) je (r) bez \~\
+r_1. ... .r_n = @, ak niektorý z členov (r) je @\
+r_1. ... .r_n = s_1. ... .s_k, pričom (s) je (r) bez \~\
 (r_1+ ... +r_n)\* = (s_1+ ... +s_k)\*, pričom (s) je (r) bez \~\
 r_1+ ... +r_n = s_1+ ... +s_k, pričom (s) je (r) bez @\
 (\~+r).r* = r*
@@ -91,7 +91,7 @@ Pozostáva z dvoch podčastí:
 
 ### 1) Načítanie regulárneho výrazu
 
-Pre zjednodušenie tu program používa "trik". Definuje tri operátory zodpovedajúce operátorom v regulárnych výrazoch. Prečíta zadaný regex ako reťazec a v ňom nahradí znaky '.', '+' a '*' za príslušné operátory. Potom z výsledného reťazca vytvorí term. Vďaka definovanej priorite, asociativite a arite operátorov, dostane "zadarmo" správnu reprezentáciu bez definície nového významu bodky, plusus a hviezdičky. Potom stačí túto reprezentáciu používajúcu operátory previesť na [tú](#reprezentácia-regulárneho-výrazu), ktorá sa používa vo zvyšku programu.
+Pre zjednodušenie tu program používa "trik". Definuje tri operátory zodpovedajúce operátorom v regulárnych výrazoch. Prečíta zadaný regex ako reťazec a v ňom nahradí znaky '.', '+' a '*' za príslušné operátory. Potom z výsledného reťazca vytvorí term. Vďaka definovanej priorite, asociativite a arite operátorov, dostane "zadarmo" správnu reprezentáciu bez definície nového významu bodky, plusu a hviezdičky. Potom stačí túto reprezentáciu používajúcu operátory previesť na [tú](#reprezentácia-regulárneho-výrazu), ktorá sa používa vo zvyšku programu.
 
 ### 2) Prevod regulárneho výrazu na LNFA
 
@@ -117,10 +117,10 @@ Definovaný rekurzívne.
 
 pre ľubovoľný symbol *s*
 
-| *s*  | *s* | ~   |
-| ---- | --- | --- |
-| -> 0 | {1} | {}  |
-| <- 1 | {}  | {}  |
+| *s*  | *s* | ~  |
+| ---- | --- | -- |
+| -> 0 | {1} | {} |
+| <- 1 | {}  | {} |
 
 Operácie predpokladajú, že všetky "medzi-automaty" majú práve jeden prijímajúci stav.
 
