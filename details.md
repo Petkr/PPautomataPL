@@ -1,6 +1,4 @@
-# PPautomataPL
-
-## programátorská príručka
+# PPautomataPL - programátorská príručka
 
 ## Reprezentácia symbolov a stavov
 

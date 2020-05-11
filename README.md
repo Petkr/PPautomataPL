@@ -1,6 +1,4 @@
-# PPautomataPL
-
-## užívateľská príručka
+# PPautomataPL - užívateľská príručka
 
 Program na prevádzanie konečných automatov na regulárne výrazy a späť v Prologu.
 
